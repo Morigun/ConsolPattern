@@ -3,3 +3,4 @@ D:\Проекты\MSVS\C#\ConsolPattern\ConsolPattern\bin\Debug\ConsolPattern.ex
 D:\Проекты\MSVS\C#\ConsolPattern\ConsolPattern\bin\Debug\ConsolPattern.pdb
 D:\Проекты\MSVS\C#\ConsolPattern\ConsolPattern\obj\Debug\ConsolPattern.exe
 D:\Проекты\MSVS\C#\ConsolPattern\ConsolPattern\obj\Debug\ConsolPattern.pdb
+D:\Проекты\MSVS\C#\ConsolPattern\ConsolPattern\obj\Debug\ConsolPattern.csprojResolveAssemblyReference.cache

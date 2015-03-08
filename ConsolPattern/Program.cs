@@ -26,18 +26,19 @@ namespace ConsolPattern
 
         static void Main(string[] args)
         {
-            Subject s = new Subject();
-            int x = 3, y = 4, z = 0;
+            Subject s = new Subject();            
             MyEventHandler myEv1 = () => Console.WriteLine("Hello D");
             MyEventHandler myEv2 = () => Console.WriteLine("Hello World");
-            MyEventHandler myEv3 = () => FunkCalcTest(x, y, out z);
-            MyEventHandler myEv4 = () => Console.WriteLine(String.Format("Z = {0}",z.ToString()));
             s.MyEvent += myEv1;
             s.MyEvent += myEv2;
             s.MyEvent -= myEv1;
+            /*Итак идея использования данного паттерна*/
+            int x = 3, y = 4, z = 1;
+            MyEventHandler myEv3 = () => FunkCalcTest(x, y, out z);
+            MyEventHandler myEv4 = () => Console.WriteLine(String.Format("Z = {0}", z.ToString()));
+
             s.MyEvent += myEv3;
             s.MyEvent += myEv4;
-            /*Итак идея использования данного паттерна*/
             x = y * z;
             
             s.RaiseEvent(); //вызвать все делегаты

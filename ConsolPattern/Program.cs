@@ -28,8 +28,11 @@ namespace ConsolPattern
         static void Main(string[] args)
         {
             Subject s = new Subject();
-            s.MyEvent += () => Console.WriteLine("Hello D"); // присоеденить делегат
-            s.MyEvent += () => Console.WriteLine("Hello World"); // присоеденить делегат
+            MyEventHandler myEv1 = () => Console.WriteLine("Hello D");
+            MyEventHandler myEv2 = () => Console.WriteLine("Hello World");
+            s.MyEvent += myEv1;
+            s.MyEvent += myEv2;
+            s.MyEvent -= myEv1;
             s.RaiseEvent(); //вызвать все делегаты
             Console.ReadKey();
         }
